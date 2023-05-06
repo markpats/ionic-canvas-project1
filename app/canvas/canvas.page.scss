@@ -1,0 +1,62 @@
+
+canvas{
+  height: 100%;
+  width: 100%;
+  display: block;
+  background-color:#ffffff;
+}
+
+canvas {
+    border: 1px solid rgb(0, 0, 0);
+  }
+  
+  .color-block {
+    height: 40px;
+  }
+  ion-content{
+    --background:#ffffff;
+}
+
+#top-toolbar{
+  --background:#fffff;
+  position: absolute;
+  top: 10px;
+  font-size:100px;
+}
+
+#top-botbar{
+  --background:#cab3b3;
+  
+  bottom: 10px;
+  
+}
+
+#buttonsize {
+  width:40px;
+  height: 40px;
+  display: flex;
+
+}
+
+#trash{
+  width:40px;
+  height: 40px;
+}
+
+#ionbutton{
+  
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#changesizeposition{
+  position: relative;
+  display: flex;
+  justify-content: right;
+  
+  
+}
+
+

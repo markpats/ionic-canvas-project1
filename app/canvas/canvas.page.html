@@ -1,0 +1,73 @@
+
+
+<ion-toolbar id="top-toolbar">
+
+        <!--Change Color-->
+        
+  <ion-buttons id="ionbutton">
+    
+    
+    <!-- Erasure -->
+    <button slot="start 
+      "color="dark" ion-button icon-only 
+      (click)="clearCanvas()">
+      <ion-icon id="buttonsize" name="trash"></ion-icon>
+    </button>
+
+  
+    <button id="ionbutton"
+      *ngFor="let colour of availableColors"
+        icon-only
+        ion-button
+      (click)="changeColor(colour)">
+      <ion-icon id="buttonsize"
+      [style.color]="colour" name="brush"></ion-icon>
+    </button>
+    
+
+      <!-- Erasure (white) -->
+    <ion-buttons right>
+      <button
+
+        ion-button
+        icon-only
+        style.color="#fff"
+        (click)="changeColor('#fff')">
+
+      <ion-icon  id="buttonsize"
+      src="../../assets/icon/eraser.svg"
+        style="color: #fff;" name="square">
+      </ion-icon>
+
+      </button>
+    </ion-buttons>
+  
+
+  </ion-buttons>
+</ion-toolbar>
+
+
+
+
+<!-- event when clicking the mouse to trigger the brush -->
+<canvas
+  #myCanvas
+  (touchstart)="handleStart($event)"
+  (touchmove)="handleMove($event)"
+></canvas>
+
+
+<!--Bottom toolbar-->
+
+
+<ion-toolbar id="top-botbar">
+  
+  <ion-range min="2" max="200" color="primary" [(ngModel)]="brushSize">
+    <ion-icon size="large" slot="start" name="remove-circle-outline"></ion-icon>
+    <ion-icon size="large" slot="end" name="add-circle-outline"></ion-icon>
+  </ion-range>
+
+</ion-toolbar>
+
+
+
